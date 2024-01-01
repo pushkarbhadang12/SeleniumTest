@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cucumber Automation Suite">
+	<listeners>
+		<listener class-name="com.cucumber.pom.Runner.TestListener"></listener>
+	</listeners>
+	<test name="Complete Test Run">
+		<classes>
+			<class name="com.cucumber.pom.Runner.TestRunner" />
+		</classes>
+	</test>
+</suite>
