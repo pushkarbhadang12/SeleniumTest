@@ -110,29 +110,23 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-			<!--plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-					<archive>
-						<manifest>
-							<mainClass>com.cucumber.pom.Runner.JavaRunner</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			<plugin-->
+			<plugin>
+                    <groupId>com.github.ferstl</groupId>
+                    <artifactId>depgraph-maven-plugin</artifactId>
+                    <version>4.0.3</version>
+                    <configuration>
+                        <graphFormat>puml</graphFormat>
+                        <scope>compile</scope>
+                        <excludes>
+                            <exclude>org.slf4j:slf4j-api</exclude>
+                            <exclude>com.google.guava:guava</exclude>
+                            <exclude>io.vavr:vavr</exclude>
+                        </excludes>
+                        <transitiveExcludes>
+                            <transitiveExclude>*</transitiveExclude>
+                        </transitiveExcludes>
+                    </configuration>
+                </plugin>
 		</plugins>
 	</build>
 </project>
