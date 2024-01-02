@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_pushkarbhadang12_SeleniumTest_1704180207098-pr-trigger-input-set
+  identifier: Build_pushkarbhadang12_SeleniumTest_1704180207098prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: SeleniumCucumberTest2
+  pipeline:
+    identifier: Build_pushkarbhadang12_SeleniumTest_1704180207098
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
