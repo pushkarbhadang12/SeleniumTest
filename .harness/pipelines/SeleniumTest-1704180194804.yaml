@@ -21,6 +21,8 @@ pipeline:
                   identifier: seleniumtest
                   name: seleniumtest
                   spec:
+                    language: Java
+                    buildTool: Maven
                     shell: Sh
                     command: mvn -B package --file RediffMoneyCucumberPOM/pom.xml
                   timeout: ""
