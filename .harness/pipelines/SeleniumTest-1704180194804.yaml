@@ -18,11 +18,11 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
+                  identifier: seleniumtest
+                  name: seleniumtest
                   spec:
                     shell: Sh
-                    command: echo hello world
+                    command: mvn -B package --file RediffMoneyCucumberPOM/pom.xml
                   timeout: ""
                   type: Run
           platform:
