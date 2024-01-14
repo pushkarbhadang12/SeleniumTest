@@ -92,48 +92,8 @@
     			<artifactId>assertj-core</artifactId>
     			<version>3.25.1</version>
     			<scope>test</scope>
-</dependency>
+		</dependency>
 
 	</dependencies>
-        <build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
-				<configuration>
-					<source>17</source>
-					<target>17</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.2</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-			<plugin>
-                    <groupId>com.github.ferstl</groupId>
-                    <artifactId>depgraph-maven-plugin</artifactId>
-                    <version>4.0.0</version>
-                    <configuration>
-                        <graphFormat>puml</graphFormat>
-                        <scope>compile</scope>
-                        <excludes>
-                            <exclude>org.slf4j:slf4j-api</exclude>
-                            <exclude>com.google.guava:guava</exclude>
-                            <exclude>io.vavr:vavr</exclude>
-                        </excludes>
-                        <transitiveExcludes>
-                            <transitiveExclude>*</transitiveExclude>
-                        </transitiveExcludes>
-                    </configuration>
-                </plugin>
-		</plugins>
-	</build>
-	
+        	
 </project>
