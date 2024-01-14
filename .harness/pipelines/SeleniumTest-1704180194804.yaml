@@ -23,7 +23,8 @@ pipeline:
                   spec:
                     language: Java
                     buildTool: Maven
-                    shell: Sh
+                    args: test
+                    packages: io.harness
                     command: mvn -B package --file RediffMoneyCucumberPOM/pom.xml
                   timeout: ""
                   type: Run
