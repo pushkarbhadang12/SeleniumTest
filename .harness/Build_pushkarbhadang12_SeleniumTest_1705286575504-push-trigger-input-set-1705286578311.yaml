@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_pushkarbhadang12_SeleniumTest_1705286575504-push-trigger-input-set
+  identifier: Build_pushkarbhadang12_SeleniumTest_1705286575504pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: TestProject
+  pipeline:
+    identifier: Build_pushkarbhadang12_SeleniumTest_1705286575504
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
