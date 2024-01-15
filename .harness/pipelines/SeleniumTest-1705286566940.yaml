@@ -21,7 +21,7 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
-                    command: echo hello world
+                    command: mvn -B package --file RediffMoneyCucumberPOM/pom.xml
                   timeout: ""
                   type: Run
           platform:
