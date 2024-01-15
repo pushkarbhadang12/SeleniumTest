@@ -25,7 +25,7 @@ pipeline:
                     uses: actions/setup-java@v3
                     with:
                       distribution: temurin
-                      java-version: "17"
+                      java-version: 17
               - step:
                   type: Action
                   name: Setup Maven
