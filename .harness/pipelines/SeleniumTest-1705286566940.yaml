@@ -18,8 +18,28 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
+                  type: Action
+                  name: setup java
+                  identifier: setup_java
+                  spec:
+                    uses: actions/setup-java@v3
+                    with:
+                      distribution: temurin
+                      java-version: "1.8"
+              - step:
+                  type: Action
+                  name: Setup Maven
+                  identifier: setup_maven
+                  spec:
+                    uses: s4u/setup-maven-action@v1.7.0
+                    with:
+                      checkout-fetch-depth: 0
+                      java-version: 1.8
+                      java-distribution: temurin
+                      maven-version: 3.9.6
+              - step:
+                  identifier: seleniumtest
+                  name: seleniumtest
                   spec:
                     command: mvn -B package --file RediffMoneyCucumberPOM/pom.xml
                   timeout: ""
